@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap-env:Header>
+      <eb:MessageHeader xmlns:eb="http://www.ebxml.org/namespaces/messageHeader" eb:version="1.0" soap-env:mustUnderstand="1">
+         <eb:From>
+            <eb:PartyId eb:type="URI" />
+         </eb:From>
+         <eb:To>
+            <eb:PartyId eb:type="URI" />
+         </eb:To>
+         <eb:CPAId>WR17</eb:CPAId>
+         <eb:ConversationId>9830623b-af57-4908-aeff-3fb901753480</eb:ConversationId>
+         <eb:Action>GetVehAvailRS</eb:Action>
+         <eb:MessageData>
+            <eb:MessageId>fsnq0gfq1</eb:MessageId>
+            <eb:Timestamp>2020-06-04T18:50:19</eb:Timestamp>
+            <eb:RefToMessageId>mid:20001209-133003-2333@clientofsabre.com</eb:RefToMessageId>
+         </eb:MessageData>
+      </eb:MessageHeader>
+      <wsse:Security xmlns:wsse="http://schemas.xmlsoap.org/ws/2002/12/secext">
+         <wsse:BinarySecurityToken valueType="String" EncodingType="wsse:Base64Binary">Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/RESG!ICESMSLB\/RES.LB!1591296617909!7152!25</wsse:BinarySecurityToken>
+      </wsse:Security>
+   </soap-env:Header>
+   <soap-env:Body>
+      <ns14:GetVehAvailRS xmlns:ns14="http://services.sabre.com/car/avail/v1" xmlns="http://services.sabre.com/STL_Payload/v02_01" xmlns:ns10="http://services.sabre.com/util/geo/v1" xmlns:ns11="http://services.sabre.com/STL_Payload/v02_02" xmlns:ns12="http://www.OpenTravel.org/ns/OTA2/AppInfo_v01_00" xmlns:ns13="http://services.sabre.com/STL/v01" xmlns:ns15="http://services.sabre.com/car/descriptiveinfo/v2" xmlns:ns16="http://services.sabre.com/ssse/trace/v01" xmlns:ns17="http://services.sabre.com/sp/ssp/v1" xmlns:ns18="http://services.sabre.com/essm/session/v1" xmlns:ns19="http://webservices.sabre.com/servicesplatform/eiapi/1.0.0" xmlns:ns2="http://services.sabre.com/essm/core/v1" xmlns:ns20="http://services.sabre.com/car/avail/v1.0" xmlns:ns21="http://services.sabre.com/car/rates/v1.0" xmlns:ns22="http://services.sabre.com/sp/preferences/v1" xmlns:ns23="http://services.sabre.com/car/content/v1" xmlns:ns24="http://services.sabre.com/vehicle/media/v1" xmlns:ns3="http://services.sabre.com/essm/diagnostic/v1" xmlns:ns4="http://opentravel.org/common/v02" xmlns:ns5="http://opentravel.org/common/message/v02" xmlns:ns6="http://webservices.sabre.com/servicesplatform/host/1.0.0" xmlns:ns7="http://services.sabre.com/STL_Header/v02_02" xmlns:ns8="http://services.sabre.com/STL_Header/v120" xmlns:ns9="http://services.sabre.com/STL_Header/v02_01">
+         <ns11:ApplicationResults status="Complete">
+            <ns11:Success timeStamp="2020-06-04T13:50:19.610-05:00" />
+         </ns11:ApplicationResults>
+         <ns14:VehAvailInfos PickUpDate="2020-06-22" ReturnDate="2020-06-26" RentalHours="0" PickUpTime="0900" ReturnTime="0900" RentalDays="4">
+            <ns14:VehAvailInfo>
+               <ns14:Vendor Code="ET" Logo="http://vcmp-cars.sabre.com/image/upload/f_auto,q_auto:best,t_vcmp_logo/car/l/et/ET.png" Name="ENTERPRISE" />
+               <ns14:PickUpLocation LocationCode="DFW" ExtendedLocationCode="DFW" Distance="NA" PolicyRef="ETDFWDFW" />
+               <ns14:ReturnLocation LocationCode="DFW" ExtendedLocationCode="DFW" Distance="NA" PolicyRef="ETDFWDFW" />
+               <ns14:VehRentalRate GuaranteeInd="G" RateCode="EW4" AvailabilityStatus="S" RatePlanReturned="D">
+                  <ns14:Vehicle VehType="ECAR">
+                     <ns14:SeatBeltsAndBagsInfo>
+                        <ns14:SeatBelts Quantity="4" />
+                        <ns14:BagsInfo>
+                           <ns14:Bags Size="Large" Quantity="1" />
+                           <ns14:Bags Size="Small" Quantity="2" />
+                        </ns14:BagsInfo>
+                     </ns14:SeatBeltsAndBagsInfo>
+                     <ns14:Images>
+                        <ns14:Image Type="ORIGINAL" Height="300" Width="400" Url="http://vcmp-cars.sabre.com/image/upload/f_auto,q_auto:best/car/i/38531/vrntiu2qa2d7xnv3snby.jpg" />
+                     </ns14:Images>
+                  </ns14:Vehicle>
+                  <ns14:VehicleCharges>
+                     <ns14:VehicleCharge CurrencyCode="USD" ExtraMileageCharge=".00" UOM="MI" ChargeType="BaseRateTotal" Amount="55.75" MileageAllowance="UNL" />
+                     <ns14:VehicleCharge ExtraMileageCharge=".00" UOM="MI" ChargeType="ExtraDay" Amount="55.75" MileageAllowance="UNL" />
+                     <ns14:VehicleCharge ExtraMileageCharge=".00" UOM="MI" ChargeType="ExtraHour" Amount="11.15" MileageAllowance="UNL" />
+                     <ns14:VehicleCharge ExtraMileageCharge=".00" UOM="MI" ChargeType="ApproximateTotalPrice" Amount="326.30" MileageAllowance="UNL" />
+                  </ns14:VehicleCharges>
+                  <ns14:Commission />
+                  <ns14:CarExtraCharges />
+                  <ns14:GuaranteePrepaid />
+               </ns14:VehRentalRate>
+            </ns14:VehAvailInfo>
+         </ns14:VehAvailInfos>
+         <ns14:VehLocPolicyInfos>
+            <ns14:VehLocPolicyinfo LocationOwner="C" LocationCode="DFW" ExtendedLocationCode="DFW" CounterLocation="A" LocationType="PickUp" LocationName="DALLAS FORT WORTH INTL" PolicyRef="ETDFWDFW">
+               <ns14:VendorDetails Code="ET" Name="ENTERPRISE" />
+               <ns14:LocationInfo Latitude="32.89198" Longitude="-97.05988">
+                  <ns14:Address>
+                     <ns14:AddressLine1>2424 E 38TH ST</ns14:AddressLine1>
+                     <ns14:CityName>DALLAS</ns14:CityName>
+                     <ns14:StateProv StateCode="TX" />
+                     <ns14:PostalCode>75261-9999</ns14:PostalCode>
+                     <ns14:CountryName Code="US">United States</ns14:CountryName>
+                  </ns14:Address>
+               </ns14:LocationInfo>
+               <ns14:OperationSchedule StartDate="2020-06-22">
+                  <ns14:OperationTimes>
+                     <ns14:OperationTime DayOfTheWeek="Monday" Start="0600" End="2300" />
+                  </ns14:OperationTimes>
+               </ns14:OperationSchedule>
+            </ns14:VehLocPolicyinfo>
+            <ns14:VehLocPolicyinfo LocationOwner="C" LocationCode="DFW" ExtendedLocationCode="DFW" CounterLocation="A" LocationType="DropOff" LocationName="DALLAS FORT WORTH INTL" PolicyRef="ETDFWDFW">
+               <ns14:VendorDetails Code="ET" Name="ENTERPRISE" />
+               <ns14:LocationInfo Latitude="32.89198" Longitude="-97.05988">
+                  <ns14:Address>
+                     <ns14:AddressLine1>2424 E 38TH ST</ns14:AddressLine1>
+                     <ns14:CityName>DALLAS</ns14:CityName>
+                     <ns14:StateProv StateCode="TX" />
+                     <ns14:PostalCode>75261-9999</ns14:PostalCode>
+                     <ns14:CountryName Code="US">United States</ns14:CountryName>
+                  </ns14:Address>
+               </ns14:LocationInfo>
+               <ns14:OperationSchedule StartDate="2020-06-26">
+                  <ns14:OperationTimes>
+                     <ns14:OperationTime DayOfTheWeek="Friday" Start="0600" End="2300" />
+                  </ns14:OperationTimes>
+               </ns14:OperationSchedule>
+            </ns14:VehLocPolicyinfo>
+         </ns14:VehLocPolicyInfos>
+      </ns14:GetVehAvailRS>
+   </soap-env:Body>
+</soap-env:Envelope>

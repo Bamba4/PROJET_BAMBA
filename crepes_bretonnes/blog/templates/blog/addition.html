@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Ma page d'accueil{% endblock %}
+{% block content %}
+    {% load static %}
+    <img src="{% static 'blog/crepes.jpg' %}" alt="Mon image" />
+    <h1>Ma super calculatrice</h1>
+      <p>{{ nombre1 }} + {{ nombre2 }}, ça fait <strong>{{ total }}</strong> !<br />
+      Nous pouvons également calculer la somme dans le template : {{ nombre1|add:nombre2 }}.</p>
+      <p>Il y'a {{ nombre1 }} chev{{ nombre1 | pluralize:"al,aux" }}</p>
+       <a href="{% url "addition" nombre1 nombre2 %}">Lien vers l'addition de {{nombre1}} + {{nombre2}}</a>
+      <ul>
+        {% for code, nom in couleurs.items %}
+          <li style="color: #{{ code }}">{{ nom }}</li>
+          {% comment %}
+    Ceci est une page d'exemple. Elle est composée de 3 tableaux :
+    - tableau des ventes
+    - locations
+    - retours en garantie
+{% endcomment %}
+          {% empty %}
+                <p class="empty">Pas de commentaires pour le moment.</p>
+        {% endfor %}
+      </ul>
+{% endblock %}
+
